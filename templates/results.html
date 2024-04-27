@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results of Prediction Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        img {
+            max-width: 80%;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Label Distribution</h1>
+    <img src="{{ label_distribution }}" alt="Label Distribution Chart" title="Label Distribution of Predicted Emotions">
+
+    <h1>Social Network Analysis Graph</h1>
+{% if sna_plot_filename %}
+    <img src="{{ url_for('download_sna', filename=sna_plot_filename) }}" alt="SNA Graph" title="Social Network Analysis Graph">
+    <a href="{{ url_for('download_sna', filename=sna_plot_filename) }}" class="btn btn-primary">Download SNA Graph</a>
+{% else %}
+    <p>SNA graph is not available for download.alternative you can use Gephi for SNA Visualization</p>
+{% endif %}
+
+    <h1>Download Results</h1>
+<a href="{{ url_for('download_file', filename=result_filename) }}" class="btn btn-primary">Download Prediction Results</a>
+</body>
+</html>

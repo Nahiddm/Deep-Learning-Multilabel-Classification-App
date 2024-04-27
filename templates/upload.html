@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Klasifikasi Multilabel Komentar Berdasarkan Emosi Pemilu 2024</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            color: #004280;
+            text-align: center;
+        }
+        h1 {
+            color: #DF0101;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: auto;
+            padding: 40px;
+            width: 60%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        input[type=file], input[type=submit] {
+            border: 2px solid #DF0101;
+            color: #004280;
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        input[type=submit] {
+            background-color: #DF0101;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type=submit]:hover {
+            background-color: #B40404;
+        }
+        img.mascot {
+            max-width: 30%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analisis Klasifikasi Multilabel Komentar Berdasarkan Emosi Pemilu 2024</h1>
+    <img src="msct.png" alt="Election Mascot" class="mascot">
+    <form action="/uploader" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type="submit" value="Upload File" />
+    </form>
+</body>
+</html>
